@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Barlow:wght@600&family=Fraunces:wght@700&family=Outfit:wght@500&family=Red+Hat+Text:wght@700&family=Rubik:wght@500&family=Syne+Mono&display=swap');
+
+body{
+    background-color: #4A586E;
+}
+
+.container{
+    width: 100%;
+    max-height: 100%;
+    max-width: 600px;
+    background-color: #F7F7F2;
+    border-radius: 25px;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    font-family:'Arvo', serif;
+}
+
+h3{
+    color: #4A586E;
+    font-size: 24px;
+}
+
+input{
+    outline: none;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+}
+
+.add-task{
+    margin: 40px 0 10px 0;
+}
+
+.submit{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border: none;
+    background: #fff;
+    color: #4A586E;
+    background-image: url("./images/plus.svg");
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 12px 0;
+}
+
+.add-task{
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+}
+
+.input{
+    width: 300px;
+    padding: 0 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4A586E;
+    background-color: transparent;
+    margin-right: 15px;
+    color: #4A586E;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.input::placeholder{
+    color:#4A586E;
+}
+
+.task-list-item{
+    background-color: #4A586E;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 35px;
+    margin-bottom: 12px;
+    width: 350px;
+    margin-right: 45px;
+    margin-left: 5px;
+}
+
+.task-list-item input{
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    background-image: url("./images/check-mark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0;
+    transition: 0.2s;
+    margin: 8px 8px 0 2px;
+    flex-shrink:0;
+    margin-top: 4px;
+    appearance: none;
+}
+
+.task-list-item input:hover{
+    border-color: #fff;
+    box-shadow: 0 0 0 3px #4A586E;
+}
+
+.task-list-item input:checked{
+    background-size: 10px;
+    border: 1px solid #4A586E;
+    background-color: #fff;
+}
+
+.task-list-item input:checked + span{
+    color: #272727;
+    text-decoration: line-through #4A586E;
+} 
+
+
+.task-list-item-label{
+    display: flex;
+    align-items: flex-start;
+    color: #4A586E;
+    margin-right: 8px;
+    font-size: 14px;
+    line-height: 24px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.delete{
+    margin-left: auto;
+    margin-right: 5px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("./images/trash-can.svg");
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.items{
+    color: #fff;
+}
+
+@media (max-width:457px){
+    .container{
+        max-width: 300px;
+        margin:100px auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .task-list-item{
+        max-width: 275px;
+    }
+    .input{
+        width: 200px;
+    }
+}

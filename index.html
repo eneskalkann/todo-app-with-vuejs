@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-list-app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/check-mark.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="container" id="app">
+        <h3>ToDo List</h3>
+        <div class="add-task">
+            <input class="input" type="text" autocomplete="off"  placeholder="Add New Task" v-model="tasks.listItem" @keyup.enter="newItem">
+            <input type="submit" value="" class="submit" title="Add Tasks" @click="newItem">
+        </div>
+        <ul class="list">
+            <li class="task-list-item" v-for="task in tasks">
+                <label class="task-last-item-label">
+                    <input type="checkbox">
+                    <span class="items">{{task.listItem}}</span>
+                </label>
+                <span @click="deleteItem(task)" class="delete">{{task.delete}}</span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
